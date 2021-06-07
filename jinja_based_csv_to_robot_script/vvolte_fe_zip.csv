@@ -1,0 +1,17 @@
+Name;Source;Destination;Protocol;Port;Stateful
+ZIP_CFX_zip_vsbg_sig_sp1_5060_TCP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;zip_vsbg_sig_sp1;6;5060;TRUE
+ZIP_CFX_zip_vsbg_sig_sp1_5060_UDP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;zip_vsbg_sig_sp1;17;5060;TRUE
+ZIP_CFX_zip_vsbg_sig_sp2_5060_TCP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;zip_vsbg_sig_sp2;6;5060;TRUE
+ZIP_CFX_zip_vsbg_sig_sp2_5060_UDP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;zip_vsbg_sig_sp2;17;5060;TRUE
+ZIP_CFX_zip_vmtas_sig_sp1_5060_TCP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;zip_vmtas_sig_sp1;6;"5060,5094";TRUE
+ZIP_CFX_zip_vmtas_sig_sp1_5060_UDP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;zip_vmtas_sig_sp1;17;"5060,5094";TRUE
+ZIP_CFX_ZIP_mtas_evip_5060_TCP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;VoLTE_ZIP_mtas_eVIP;6;"5060,5094";TRUE
+ZIP_CFX_ZIP_mtas_evip_5060_UDP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;VoLTE_ZIP_mtas_eVIP;17;"5060,5094";TRUE
+ZIP_mtas_evip_ZIP_CFX_5080_TCP;VoLTE_ZIP_mtas_eVIP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;6;"5080,5092";TRUE
+ZIP_mtas_evip_ZIP_CFX_5080_UDP;VoLTE_ZIP_mtas_eVIP;ZIP_CFX_vVoLTE_VLAN-SIGTCP;17;"5080,5092";TRUE
+ZIP_vsbg_sig_sp1_ZIP_CFX_5080_TCP;zip_vsbg_sig_sp1;ZIP_CFX_vVoLTE_VLAN-SIGTCP;6;"5080,5090";TRUE
+ZIP_vsbg_sig_sp1_ZIP_CFX_5080_UDP;zip_vsbg_sig_sp1;ZIP_CFX_vVoLTE_VLAN-SIGTCP;17;"5080,5090";TRUE
+ZIP_vsbg_sig_sp1_ZIP_mtas_evip_5060_TCP;zip_vsbg_sig_sp1;VoLTE_ZIP_mtas_eVIP;6;"5060,5094";TRUE
+ZIP_vsbg_sig_sp1_ZIP_mtas_evip_5060_UDP;zip_vsbg_sig_sp1;VoLTE_ZIP_mtas_eVIP;17;"5060,5094";TRUE
+ZIP_mtas_evip_ZIP_vsbg_sig_sp1_5060_TCP;VoLTE_ZIP_mtas_eVIP;zip_vsbg_sig_sp1;6;5060;TRUE
+ZIP_mtas_evip_ZIP_vsbg_sig_sp1_5060_UDP;VoLTE_ZIP_mtas_eVIP;zip_vsbg_sig_sp1;17;5060;TRUE

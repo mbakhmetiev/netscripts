@@ -1,0 +1,43 @@
+*** Settings ***
+Resource    cats_lib/resources/cats_common.robot
+
+*** Variables ***
+${org_name}             {{ orgName }}
+${l3_domain_name}       {{ l3_domain_name }}
+
+*** Test Cases ***
+CSPROOT Logs in VSD
+    Csproot user is logged in VSD
+{% set count = namespace(value=10) %}
+{% for inputsRow in inputsList %}
+Creating Ingress Security Policy Entry {{inputsRow.Name}}
+    Create Ingress Security Policy Entry in L3 domain
+    ...    ACLTemplateName=VoLTE_Intra_Zipec_Datacenter_Policies
+    ...    description={{inputsRow.Name}}
+    ...    cats_domain_name=${l3_domain_name}
+    ...    action=FORWARD
+    ...    cats_org_name=${org_name}
+    ...    protocol={{inputsRow.Protocol}}
+    ...    stateful={{inputsRow.Stateful}}
+    ...    sourcePort=*
+    ...    destinationPort={{inputsRow.Port}}
+    ...    priority={{count.value}}
+    ...    cats_traffic_source=@[zone, {{inputsRow.Source}}]
+    ...    cats_traffic_destination=@[zone, {{inputsRow.Destination}}]
+
+Creating Egress Security Policy Entry {{inputsRow.Name}}
+    Create Egress Security Policy Entry in L3 domain
+    ...    ACLTemplateName=VoLTE_Intra_Zipec_Datacenter_Policies
+    ...    description={{inputsRow.Name}}
+    ...    cats_domain_name=${l3_domain_name}
+    ...    action=FORWARD
+    ...    cats_org_name=${org_name}
+    ...    protocol={{inputsRow.Protocol}}
+    ...    stateful={{inputsRow.Stateful}}
+    ...    sourcePort=*
+    ...    destinationPort={{inputsRow.Port}}
+    ...    priority={{count.value}}
+    ...    cats_traffic_source=@[zone, {{inputsRow.Source}}]
+    ...    cats_traffic_destination=@[zone, {{inputsRow.Destination}}]
+{% set count.value = count.value + 10 %}
+{% endfor %}
