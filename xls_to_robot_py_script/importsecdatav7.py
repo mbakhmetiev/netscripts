@@ -39,8 +39,8 @@ def get_the_input(inp, obj):
 """ Get the enterprise list from the VSD """
 
 #session = vspk.NUVSDSession(
-#        username='csproot',
-#        password='csproot',
+#        username='*',
+#        password='*',
 #        enterprise='csp',
 #        api_url="https://192.168.180.10:8443")
 #
