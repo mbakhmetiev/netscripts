@@ -2,7 +2,7 @@
 
 #1. Base 64 encode for csproot:csproot
 
-csp_b64=$(perl -MMIME::Base64 -e "print encode_base64(\"csproot:csproot\")")
+csp_b64=$(perl -MMIME::Base64 -e "print encode_base64(\"*:*\")")
 
 #2. Get vEPC API key
 
